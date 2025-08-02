@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="desafio2.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo"></h1>
+    </header>
+    <main class="container">
+        <div class="containerNombre">
+            <h2 id="tituloContainerNombre" class="tituloCard"></h2>
+            <input type="text" id="nombreUsuario">
+            <p id="saludoNombreUsuario" class="parrafoCard"></p>
+            <button onclick="clickButtonName()" class="button">Aceptar</button>
+        </div>
+
+        <div class="containerNumero">
+            <h2 id="tituloContainerNumero" class="tituloCard"></h2>
+            <input type="number" id="numeroUsuario">
+            <p id="dobleNumeroUsuario" class="parrafoCard"></p>
+            <button onclick="clickButtonNumber()" class="button">Aceptar</button>
+        </div>
+
+        <div class="containerTripleNumero">
+            <h2 id="tituloContainerTripleNumero" class="tituloCard"></h2>
+            <input type="number" id="primerNumeroUsuario">
+            <input type="number" id="segundoNumeroUsuario">
+            <input type="number" id="tercerNumeroUsuario">
+            <p id="promedioNumerosUsuario" class="parrafoCard"></p>
+            <button onclick="clickButtonTripleNumber()" class="button">Aceptar</button>
+        </div>
+    </main>
+
+      <script src="desafio2.js"></script>
+</body>
+</html>

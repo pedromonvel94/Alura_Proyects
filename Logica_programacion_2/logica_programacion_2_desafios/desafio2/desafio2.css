@@ -1,0 +1,114 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tipografía general */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #00b09b, #96c93d);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Encabezado */
+header {
+  width: 100%;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(10px);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+}
+
+/* Contenedor principal */
+main.container {
+  width: 90%;
+  max-width: 800px;
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.containerNombre,
+.containerNumero,
+.containerTripleNumero {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.containerNombre:hover,
+.containerNumero:hover,
+.containerTripleNumero:hover{
+  transform: translateY(-5px);
+}
+
+.tituloCard {
+  font-size: 1.5rem;
+  color: #222;
+  margin-bottom: 0.5rem;
+  text-align: center; /* <- Esto centra el texto */
+}
+
+
+.parrafoCard {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Inputs y botones */
+input[type="text"],
+input[type="number"] {
+  width: 80%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+input:focus {
+  border-color: #00b09b;
+  outline: none;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: #00b09b;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #02897a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  main.container {
+    grid-template-columns: 1fr;
+  }
+}

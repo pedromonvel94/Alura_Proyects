@@ -11,27 +11,42 @@
         <h1 id="titulo"></h1>
     </header>
     <main class="container">
-        <div class="containerNombre">
+        <div class="containerCards">
             <h2 id="tituloContainerNombre" class="tituloCard"></h2>
             <input type="text" id="nombreUsuario">
             <p id="saludoNombreUsuario" class="parrafoCard"></p>
             <button onclick="clickButtonName()" class="button">Aceptar</button>
         </div>
 
-        <div class="containerNumero">
+        <div class="containerCards">
             <h2 id="tituloContainerNumero" class="tituloCard"></h2>
             <input type="number" id="numeroUsuario">
             <p id="dobleNumeroUsuario" class="parrafoCard"></p>
             <button onclick="clickButtonNumber()" class="button">Aceptar</button>
         </div>
 
-        <div class="containerTripleNumero">
+        <div class="containerCards">
             <h2 id="tituloContainerTripleNumero" class="tituloCard"></h2>
             <input type="number" id="primerNumeroUsuario">
             <input type="number" id="segundoNumeroUsuario">
             <input type="number" id="tercerNumeroUsuario">
             <p id="promedioNumerosUsuario" class="parrafoCard"></p>
             <button onclick="clickButtonTripleNumber()" class="button">Aceptar</button>
+        </div>
+
+        <div class="containerCards">
+            <h2 id="tituloContainerDobleNumero" class="tituloCard"></h2>
+            <input type="number" id="primerNumeroUsuario_comparacion">
+            <input type="number" id="segundoNumeroUsuario_comparacion">
+            <p id="mayorDeLosDosNumeros" class="parrafoCard"></p>
+            <button onclick="clickButtonDoubleNumber()" class="button">Aceptar</button>
+        </div>
+
+        <div class="containerCards">
+            <h2 id="tituloContainerNumeroCuadrado" class="tituloCard"></h2>
+            <input type="number" id="numeroParaElevarAlCuadrado">
+            <p id="numeroAlCuadrado" class="parrafoCard"></p>
+            <button onclick="cuadradoDeUnNumero()" class="button">Aceptar</button>
         </div>
     </main>
 

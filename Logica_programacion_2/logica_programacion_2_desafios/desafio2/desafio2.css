@@ -41,9 +41,7 @@ main.container {
   gap: 2rem;
 }
 
-.containerNombre,
-.containerNumero,
-.containerTripleNumero {
+.containerCards {
   background-color: rgba(255, 255, 255, 0.95);
   padding: 2rem;
   border-radius: 16px;
@@ -56,7 +54,8 @@ main.container {
 
 .containerNombre:hover,
 .containerNumero:hover,
-.containerTripleNumero:hover{
+.containerTripleNumero:hover,
+.containerDobleNumero:hover {
   transform: translateY(-5px);
 }
 

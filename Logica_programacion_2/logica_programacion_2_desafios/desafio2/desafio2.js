@@ -12,6 +12,8 @@ asignarTextoElemento('titulo', 'Bienvenidos al Segundo Desafio');
 asignarTextoElemento("tituloContainerNombre", 'Escribe tu nombre: ')
 asignarTextoElemento('tituloContainerNumero', 'Encontremos el doble de tu numero: ')
 asignarTextoElemento('tituloContainerTripleNumero', 'Encontremos el promedio de estos 3 numeros!: ')
+asignarTextoElemento('tituloContainerDobleNumero', 'Comparemos 2 numeros y veamos cual es mayor!')
+asignarTextoElemento('tituloContainerNumeroCuadrado', 'Averiguemos cuanto da multiplicar un numero por si mismo!')
 
 function asignarTextoElemento(idElemento, texto){
     let elementoHtml = document.getElementById(idElemento);
@@ -29,7 +31,7 @@ function clickButtonName(){
 }
 
 function clickButtonNumber(){
-    let valorIngresado = parseInt(obtenerValorIngresado('numeroUsuario'));
+    let valorIngresado = parseFloat(obtenerValorIngresado('numeroUsuario'));
 
     asignarTextoElemento('dobleNumeroUsuario', `El doble de tu numero es: ${valorIngresado * 2}`)
 }
@@ -39,5 +41,27 @@ function clickButtonTripleNumber(){
     let segundoValorIngresado = parseFloat(obtenerValorIngresado('segundoNumeroUsuario'));
     let tercerValorIngresado = parseFloat(obtenerValorIngresado('tercerNumeroUsuario'));
 
-    asignarTextoElemento('promedioNumerosUsuario', `El promedio de los 3 numeros que ingresaste es: ${((primerValorIngresado + segundoValorIngresado + tercerValorIngresado)/3).toFixed(2)}`)
+    asignarTextoElemento('promedioNumerosUsuario', `El promedio de los 3 numeros que ingresaste es: ${((primerValorIngresado + segundoValorIngresado + tercerValorIngresado)/3).toFixed(2)}`);
+}
+
+function clickButtonDoubleNumber(){
+    let primerValorIngresadoParaComparar = parseFloat(obtenerValorIngresado('primerNumeroUsuario_comparacion'));
+    let segundoValorIngresadoParaComparar = parseFloat(obtenerValorIngresado('segundoNumeroUsuario_comparacion'));
+    let numeroMayor = '';
+
+    if(primerValorIngresadoParaComparar > segundoValorIngresadoParaComparar){
+        numeroMayor= primerValorIngresadoParaComparar;
+    } else if(primerValorIngresadoParaComparar < segundoValorIngresadoParaComparar){
+        numeroMayor= segundoValorIngresadoParaComparar;
+    } else{
+        numeroMayor=`Ninguno! ${primerValorIngresadoParaComparar} y ${segundoValorIngresadoParaComparar} son iguales!`;
+    }
+
+    asignarTextoElemento('mayorDeLosDosNumeros',`El mayor de entre ${primerValorIngresadoParaComparar} y ${segundoValorIngresadoParaComparar} es: ${numeroMayor}`);
+}
+
+function cuadradoDeUnNumero(){
+    let numeroAElevarAlCuadrado = parseFloat(obtenerValorIngresado('numeroParaElevarAlCuadrado'));
+
+    asignarTextoElemento('numeroAlCuadrado', `El resultado de multiplicar ${numeroAElevarAlCuadrado} por si mismo es: ${numeroAElevarAlCuadrado**2}`);
 }

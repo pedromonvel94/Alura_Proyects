@@ -1,0 +1,82 @@
+.card {
+    background-color: #ffffff; /* Fondo blanco limpio */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 8px; /* Esquinas ligeramente redondeadas */
+    padding: 20px;
+    max-width: 320px;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titulo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+.input {
+    width: 93%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input:focus {
+    outline: none;
+    border-color: #555; /* Resalta de forma discreta */
+}
+
+.texto {
+    font-size: 0.95rem;
+    color: #555;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.campo-con-select {
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.campo-con-select .input {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.campo-con-select .menuDesplegable {
+    border: none;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #f5f5f5;
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: #333; /* Botón oscuro elegante */
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #555; /* Sutil cambio en hover */
+}

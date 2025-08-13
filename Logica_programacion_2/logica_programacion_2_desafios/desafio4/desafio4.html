@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 5</title>
+    <link rel="stylesheet" href="desafio4.css">
+</head>
+<body>
+    <section class="card">
+        <h3 class="titulo" id='titulo_cardImc'></h3>
+        <input type="number" class="input" id="peso_usuario" placeholder="Ingresa tu peso en KG">
+        <input type="number" class="input" id="altura_usuario" placeholder="Ingresa tu altura en Metros">
+        <p class="texto" id="texto_resultadoImc"></p>
+        <button onclick="calcImc()" >Calcular</button>
+    </section>
+
+    <section class="card">
+        <h3 class="titulo" id='titulo_cardFactorial'></h3>
+        <input type="number" class="input" id="numero_usuario" placeholder="Ingresa un numero">
+        <p class="texto" id="texto_resultadoFactorial"></p>
+        <button onclick="calcFactorial()" >Calcular</button>
+    </section>
+
+    <section class="card">
+        <h3 class="titulo" id='titulo_cardDivisas'>Conversor de Divisas</h3>
+        
+        <div class="campo-con-select">
+            <input type="number" class="input" id="dineroUsuario" placeholder="Ingresa un valor">
+            <select class="menuDesplegable" id="primerOpcion">
+                <option value="USD">USD</option>
+                <option value="COP">COP</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        
+        <div class="campo-con-select">
+            <input type="number" class="input" id="dineroConvertido" placeholder="Resultado" readonly>
+            <select class="menuDesplegable" id="segundaOpcion">
+                <option value="COP">COP</option>
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+            </select>
+        </div>
+        
+        <p class="texto" id="texto_resultadoDivisas"></p>
+        <button onclick="conversorDivisas()">Calcular</button>
+    </section>
+
+
+    <script src="desafio4.js"></script>
+</body>
+</html>

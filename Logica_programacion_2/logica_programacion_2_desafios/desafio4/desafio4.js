@@ -10,13 +10,15 @@ Crea una función que convierta un valor en dólares, pasado como parámetro, y 
 Crea una función que muestre en pantalla el área y el perímetro de una sala rectangular, utilizando la altura y la anchura que se proporcionarán como parámetros.
 
 Crea una función que muestre en pantalla el área y el perímetro de una sala circular, utilizando su radio que se proporcionará como parámetro. Considera Pi = 3,14.
-
-Crea una función que muestre en pantalla la tabla de multiplicar de un número dado como parámetro.
 */
 
 convertirTextoElemento('titulo_cardImc', 'Calculadora de IMC');
 convertirTextoElemento('titulo_cardFactorial', 'Calculadora de Factoriales')
 convertirTextoElemento('titulo_cardDivisas', 'Conversor de Divisas')
+convertirTextoElemento('titulo_cardAreaRectangulo', 'Calculadora de area');
+convertirTextoElemento('subtitulo_largo', 'Largo:');
+convertirTextoElemento('subtitulo_ancho', 'Ancho:');
+convertirTextoElemento('titulo_cardCirculo', 'Hallar Area y Perimetro de un circulo segun su Radio');
 
 function placeholderDeInput(idInput, texto){
     document.getElementById(idInput).value = '';
@@ -90,3 +92,34 @@ function conversorDivisas(){
     } 
 }
 
+function areaDeRectangulo(){
+    let largo = parseFloat(document.getElementById('largo').value);
+    let ancho = parseFloat(document.getElementById('ancho').value);
+    let resultadoArea = largo * ancho
+
+    if(isNaN(largo)){
+        placeholderDeInput('largo', '⚠ Ingresa un valor válido');
+        convertirTextoElemento('texto_resultadoImc', `No puedes dejar el campo de largo vacio, coloca un valor valido.`);
+    } else if(isNaN(ancho)){
+        placeholderDeInput('ancho', '⚠ Ingresa un valor válido');
+        convertirTextoElemento('texto_resultadoImc', `No puedes dejar el campo de ancho vacio, coloca un valor valido.`);
+    } else {
+        convertirTextoElemento('texto_resultadoAreaRectangulo', `El area resultante de la multiplicacion entre el largo: ${largo} cm y el ancho: ${ancho} cm es: ${resultadoArea} cm².`)
+    }
+}
+
+function areaYPerimetroCirculo(){
+    let radio = parseFloat(document.getElementById('radio_usuario').value);
+    let area = 3.14*(radio**2);
+    let perimetroCirculo = (2*3.14)*radio
+
+    if(isNaN(radio)){
+        placeholderDeInput('radio', '⚠ Ingresa un valor válido');
+        convertirTextoElemento('texto_resultadoAreaPerimetroCirculo', `No puedes dejar el campo de ancho vacio, coloca un valor valido.`);
+    } else{
+        convertirTextoElemento('texto_resultadoAreaPerimetroCirculo', `Para un círculo de radio ${radio} cm:<br>
+         • Área = ${area.toFixed(2)} cm²<br>
+         • Perímetro = ${perimetroCirculo.toFixed(2)} cm`
+        );
+    }
+}

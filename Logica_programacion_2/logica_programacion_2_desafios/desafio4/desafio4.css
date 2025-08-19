@@ -39,6 +39,14 @@
     text-align: center;
 }
 
+#subtitulo_ancho,
+#subtitulo_largo{
+    text-align: left;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
 .campo-con-select {
     display: flex;
     align-items: center;
